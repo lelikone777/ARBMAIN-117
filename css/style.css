@@ -1,0 +1,189 @@
+/* Main Styles */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html, body, .container {
+    height: 100%
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: #000;
+}
+.container {
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    background: url('../img/bg.png') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Preloader */
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* background styles */
+.black-top {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 30%;
+    margin: 0 auto;
+}
+.hand {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    transform: translateX(18%);
+    width: 90%;
+}
+
+/* Form styles */
+.form {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 85%;
+    margin: 0 auto;
+    padding: 15px 25px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+.text {
+    font-size: 16px;
+    text-align: center;
+}
+input[type=tel] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 0;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    border: 1px solid #bebebe;
+    border-radius: 20px;
+}
+input::-webkit-input-placeholder {
+    color: #fff;
+}
+input::-moz-placeholder {
+    color: #fff;
+}
+input:-ms-input-placeholder {
+    color: #fff;
+}
+input::-ms-input-placeholder {
+    color: #fff;
+}
+input::placeholder {
+    color: #fff;
+}
+
+.submit {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    background-image: linear-gradient(to bottom, rgb(187, 62, 229) 0%, rgb(54, 40, 116) 100%);
+    border: none;
+    border-radius: 15px;
+}
+.submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    opacity: 0.1;
+    border-radius: inherit;
+}
+
+.terms {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+@media (orientation: landscape) and (max-height: 750px) {
+    .hand {
+        display: none;
+    }
+    .black-top {
+        transform: translateY(-40%);
+    }
+    .logo {
+        width: 20%;
+    }
+    .form {
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+    }
+}
+@media (min-height: 650px) {
+    .hand {
+        bottom: 0;
+    }
+    .form {
+        bottom: 40px;
+    }
+}
+
+/* Hand size style */
+@media (min-width: 350px) and (min-height: 665px) {
+    .hand {
+        width: 105%;
+        bottom: -50px;
+        transform: translateX(10%);
+    }
+}
+@media (max-width: 350px) and (min-height: 568px) {
+    .hand {
+        width: 105%;
+        bottom: -60px;
+        transform: translateX(10%);
+    }
+}
+@media (max-width: 320px) and (min-height: 568px) {
+    .hand {
+        bottom: -15px;
+    }
+}
